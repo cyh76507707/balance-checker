@@ -405,7 +405,7 @@ export default function Home() {
                       : tokenType === 'ERC-1155'
                         ? parseInt(entry.balance).toLocaleString()
                         : Number(entry.balance).toLocaleString()}
-                    {(tokenType === 'ERC-721' || tokenType === 'ERC-1155') && entry.tokenIds?.length > 0 && (
+                    {(tokenType === 'ERC-721' || tokenType === 'ERC-1155') && Array.isArray(entry.tokenIds) && entry.tokenIds.length > 0 && (
                       <span className="text-white/60"> ({entry.tokenIds.map(id => `#${id}`).join(', ')})</span>
                     )}
                   </p>
