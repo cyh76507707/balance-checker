@@ -1,0 +1,17 @@
+{
+    "version": "v1",
+    "app": {
+      "name": "Balance Checker",
+      "subtitle": "Check Farcaster token balance",
+      "description": "Check a Farcaster user’s token or NFT balance across all connected wallets. Just enter the FID and get balance info instantly.",
+      "tagline": "Multi-Wallet Token Lookup",
+      "icon": "https://balance-check.xyz/icon.png",
+      "splash": "https://balance-check.xyz/banner.png",
+      "accentColor": "#855DCD",
+      "categories": ["utility", "finance"],
+      "tags": ["farcaster", "balance", "erc20", "erc721", "erc1155"],
+      "ogTitle": "Farcaster Balance Checker",
+      "ogDescription": "Check token and NFT balances by FID, across all connected wallets.",
+      "ogImage": "https://balance-check.xyz/banner.png"
+    }
+  }
