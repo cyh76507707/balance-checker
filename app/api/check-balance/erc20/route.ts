@@ -166,7 +166,7 @@ export async function POST(req: Request) {
         const result: { wallet: string; balance?: string; tokenIds?: string[] } = { wallet };
 
         if (normalizedType === 'ERC-721') {
-          let tokenIds: string[] = [];
+          const tokenIds: string[] = [];
           let pageKey: string | null = null;
 
           do {
