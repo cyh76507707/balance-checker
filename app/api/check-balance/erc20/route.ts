@@ -107,9 +107,14 @@ export async function POST(req: Request) {
       addresses = userInfo.addresses;
       username = userInfo.username;
       pfp = userInfo.pfp;
-    } catch (err: any) {
-      console.error('User info error:', err.message);
-      return NextResponse.json({ error: err.message }, { status: 429 });
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error('User info error:', err.message);
+        return NextResponse.json({ error: err.message }, { status: 429 });
+      } else {
+        console.error('User info error:', err);
+        return NextResponse.json({ error: 'Unknown error' }, { status: 429 });
+      }
     }
 
     if (addresses.length === 0) {
@@ -158,7 +163,7 @@ export async function POST(req: Request) {
     const balances = await Promise.all(
       addresses.map(async (wallet: string) => {
         let balance = '0';
-        const result: any = { wallet };
+        const result: { wallet: string; balance?: string; tokenIds?: string[] } = { wallet };
 
         if (normalizedType === 'ERC-721') {
           let tokenIds: string[] = [];
@@ -169,7 +174,7 @@ export async function POST(req: Request) {
               `${NFT_API_BASE}/getNFTsForOwner?owner=${wallet}&contractAddresses[]=${contractAddress}&withMetadata=false${pageKey ? `&pageKey=${encodeURIComponent(pageKey)}` : ''}`
             );
             const data = await res.json();
-            const batch = data?.ownedNfts?.map((nft: any) => nft.tokenId) || [];
+            const batch = data?.ownedNfts?.map((nft: { tokenId: string }) => nft.tokenId) || [];
             tokenIds.push(...batch);
             pageKey = data.pageKey || null;
           } while (pageKey);
@@ -182,7 +187,7 @@ export async function POST(req: Request) {
           const nftRes = await fetch(apiUrl);
           const nftData = await nftRes.json();
 
-          const editionZero = nftData?.ownedNfts?.find((nft: any) => nft.tokenId === '0');
+          const editionZero = nftData?.ownedNfts?.find((nft: { tokenId: string }) => nft.tokenId === '0');
           if (editionZero?.balance && editionZero.balance !== '0') {
             balance = editionZero.balance;
             result['tokenIds'] = ['0'];

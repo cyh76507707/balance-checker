@@ -29,11 +29,16 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Home() {
+  interface BalanceEntry {
+    wallet: string;
+    balance: string;
+    tokenIds?: string[];
+  }
   const [fid, setFid] = useState('');
   const [tokenType, setTokenType] = useState('ERC-20');
   const [contractAddress, setContractAddress] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [balances, setBalances] = useState<any[]>([]);
+  const [balances, setBalances] = useState<BalanceEntry[]>([]);
   const [error, setError] = useState('');
   const [networkDropdownOpen, setNetworkDropdownOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false); // Token type dropdown
@@ -74,8 +79,12 @@ export default function Home() {
       setTokenName(result.tokenName || '');
       setTokenSymbol(result.tokenSymbol || '');
       setUsedCachedMetadata(result.usedCachedMetadata || false);
-    } catch (err: any) {
-      setError(err.message || 'Unexpected error');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Unexpected error');
+      } else {
+        setError('Unexpected error');
+      }
     } finally {
       setIsLoading(false);
     }
