@@ -170,7 +170,7 @@ export async function POST(req: Request) {
           let pageKey: string | null = null;
 
           do {
-            const res = await fetch(
+            const res: Response = await fetch(
               `${NFT_API_BASE}/getNFTsForOwner?owner=${wallet}&contractAddresses[]=${contractAddress}&withMetadata=false${pageKey ? `&pageKey=${encodeURIComponent(pageKey)}` : ''}`
             );
             const data = await res.json();
