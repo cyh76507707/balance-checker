@@ -1,9 +1,9 @@
 {
-  "version": "v1",
+  "version": "1",
   "accountAssociation": {
     "header": "eyJhbGciOiJlaXAxOTEiLCJ0eXAiOiJlaXAxOTEifQ",
     "payload": "eyJkb21haW4iOiJiYWxhbmNlLWNoZWNrLnh5eiJ9",
-    "signature": "0x88646c70a67b5abd52c8e3d64e52e15e8314263f2ae0429b9b4d24dd81c304c82e10df02285eef9e6e789faa052284e85c75a67cee1bf552ae38e57bae2976901c"
+    "signature": "0xce2b76197c81fa8f373bd249423c47f3e68f1de503a343f005f48cb9ce02d3854940a54138897430c7b4289b878ce3f4ac1b7a4159c69eaf878fb973082131ea1c"
   },
   "frame": {
     "name": "Balance Checker",
