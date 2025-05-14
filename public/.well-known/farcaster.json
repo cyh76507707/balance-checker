@@ -1,22 +1,23 @@
 {
-    "version": "v1",
-    "accountAssociation": {
-      "header": "eyJhbGciOiJlaXAxOTEiLCJ0eXAiOiJlaXAxOTEifQ",
-      "payload": "eyJkb21haW4iOiJiYWxhbmNlLWNoZWNrLnh5eiJ9",
-      "signature": "0x88646c70a67b5abd52c8e3d64e52e15e8314263f2ae0429b9b4d24dd81c304c82e10df02285eef9e6e789faa052284e85c75a67cee1bf552ae38e57bae2976901c"
-    },
-    "app": {
-      "name": "Balance Checker",
-      "subtitle": "Check Farcaster token balance",
-      "description": "Check a Farcaster user’s token or NFT balance across all connected wallets. Just enter the FID and get balance info instantly.",
-      "tagline": "Multi-Wallet Token Lookup",
-      "icon": "https://balance-check.xyz/icon.png",
-      "splash": "https://balance-check.xyz/banner.png",
-      "accentColor": "#855DCD",
-      "categories": ["utility", "finance"],
-      "tags": ["farcaster", "balance", "erc20", "erc721", "erc1155"],
-      "ogTitle": "Farcaster Balance Checker",
-      "ogDescription": "Check token and NFT balances by FID, across all connected wallets.",
-      "ogImage": "https://balance-check.xyz/banner.png"
-    }
+  "version": "v1",
+  "accountAssociation": {
+    "header": "eyJhbGciOiJlaXAxOTEiLCJ0eXAiOiJlaXAxOTEifQ",
+    "payload": "eyJkb21haW4iOiJiYWxhbmNlLWNoZWNrLnh5eiJ9",
+    "signature": "0x88646c70a67b5abd52c8e3d64e52e15e8314263f2ae0429b9b4d24dd81c304c82e10df02285eef9e6e789faa052284e85c75a67cee1bf552ae38e57bae2976901c"
+  },
+  "frame": {
+    "name": "Balance Checker",
+    "subtitle": "Check Farcaster token balance",
+    "description": "Check a Farcaster user’s token or NFT balance across all connected wallets. Just enter the FID and get balance info instantly.",
+    "tagline": "Multi-Wallet Token Lookup",
+    "iconUrl": "https://balance-check.xyz/icon.png",
+    "splashImageUrl": "https://balance-check.xyz/banner.png",
+    "homeUrl": "https://balance-check.xyz",
+    "accentColor": "#855DCD",
+    "primaryCategory": "utility",
+    "tags": ["farcaster", "balance", "erc20", "erc721", "erc1155"],
+    "ogTitle": "Farcaster Balance Checker",
+    "ogDescription": "Check token and NFT balances by FID, across all connected wallets.",
+    "ogImageUrl": "https://balance-check.xyz/banner.png"
   }
+}
