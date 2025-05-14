@@ -26,9 +26,13 @@
   ];
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { sdk } from '@farcaster/frame-sdk';
 
 export default function Home() {
+  useEffect(() => {
+    sdk.actions.ready();
+  }, []);
   interface BalanceEntry {
     wallet: string;
     balance: string;
