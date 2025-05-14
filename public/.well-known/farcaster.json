@@ -1,9 +1,9 @@
 {
     "version": "v1",
     "accountAssociation": {
-      "header": "<base64url-encoded-header>",
-      "payload": "<base64url-encoded-payload>",
-      "signature": "<base64url-encoded-signature>"
+      "header": "eyJhbGciOiJlaXAxOTEiLCJ0eXAiOiJlaXAxOTEifQ",
+      "payload": "eyJkb21haW4iOiJiYWxhbmNlLWNoZWNrLnh5eiJ9",
+      "signature": "0x88646c70a67b5abd52c8e3d64e52e15e8314263f2ae0429b9b4d24dd81c304c82e10df02285eef9e6e789faa052284e85c75a67cee1bf552ae38e57bae2976901c"
     },
     "app": {
       "name": "Balance Checker",
