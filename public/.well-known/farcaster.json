@@ -11,7 +11,7 @@
     "description": "Check a Farcaster user’s token or NFT balance across all connected wallets. Just enter the FID and get balance info instantly.",
     "tagline": "Multi-Wallet Token Lookup",
     "iconUrl": "https://balance-check.xyz/icon.png",
-    "splashImageUrl": "https://balance-check.xyz/banner.png",
+    "splashImageUrl": "https://balance-check.xyz/splash.png",
     "homeUrl": "https://balance-check.xyz",
     "accentColor": "#855DCD",
     "primaryCategory": "utility",
