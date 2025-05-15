@@ -1,11 +1,11 @@
 {
-  "version": "1",
   "accountAssociation": {
     "header": "eyJhbGciOiJlaXAxOTEiLCJ0eXAiOiJlaXAxOTEifQ",
     "payload": "eyJkb21haW4iOiJiYWxhbmNlLWNoZWNrLnh5eiJ9",
     "signature": "0xce2b76197c81fa8f373bd249423c47f3e68f1de503a343f005f48cb9ce02d3854940a54138897430c7b4289b878ce3f4ac1b7a4159c69eaf878fb973082131ea1c"
   },
   "frame": {
+    "version": "1",
     "name": "Balance Checker",
     "subtitle": "Check Farcaster token balance",
     "description": "Check a Farcaster user’s token or NFT balance across all connected wallets. Just enter the FID and get balance info instantly.",
