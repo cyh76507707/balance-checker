@@ -17,7 +17,20 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="fc:frame"
-          content='{"version":"next","imageUrl":"https://balance-check.xyz/banner.png","button":{"title":"Check Balance","action":{"type":"launch_frame","url":"https://balance-check.xyz"}}}'
+          content='{
+            "version":"next",
+            "imageUrl":"https://balance-check.xyz/banner.png",
+            "button":{
+              "title":"Check Balance",
+              "action":{
+                "type":"launch_frame",
+                "name":"Balance Checker",
+                "url":"https://balance-check.xyz",
+                "splashImageUrl":"https://balance-check.xyz/splash.png",
+                "splashBackgroundColor":"#0B0C1B"
+              }
+            }
+          }'
         />
       </head>
       <body className="bg-[#0B0C1B] text-white">
