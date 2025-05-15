@@ -1,5 +1,6 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Balance Checker',
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body className="bg-[#0B0C1B] text-white">
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
