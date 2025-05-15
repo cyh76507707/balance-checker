@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Balance Checker',
@@ -19,7 +20,10 @@ export default function RootLayout({
           content='{"version":"next","imageUrl":"https://balance-check.xyz/banner.png","button":{"title":"Check Balance","action":{"type":"launch_frame","url":"https://balance-check.xyz"}}}'
         />
       </head>
-      <body className="bg-[#0B0C1B] text-white">{children}</body>
+      <body className="bg-[#0B0C1B] text-white">
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
