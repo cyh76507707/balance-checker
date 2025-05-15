@@ -391,7 +391,16 @@ export default function Home() {
         {isLoading ? 'Checking...' : 'Check Balance'}
       </button>
 
-      {error && <p className="mt-5 text-red-400 max-w-xs text-center">{error}</p>}
+      {error && (
+        <div className="mt-5 max-w-xs text-center">
+          <p className="text-red-400">{error}</p>
+          {error.includes('no connected wallet') && (
+            <p className="text-white/50 text-sm mt-2">
+              This Farcaster user has no wallet linked to their account, so we can&apos;t look up their balances.
+            </p>
+          )}
+        </div>
+      )}
 
       {balances.length > 0 && (
         <div className="mt-8 w-full max-w-md p-5 rounded-xl border border-[#855DCD] bg-black text-sm flex flex-col gap-5">
