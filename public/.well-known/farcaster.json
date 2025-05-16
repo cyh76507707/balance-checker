@@ -12,6 +12,7 @@
     "tagline": "Multi-Wallet Token Lookup",
     "iconUrl": "https://balance-check.xyz/icon.png",
     "splashImageUrl": "https://balance-check.xyz/splash.png",
+    "splashBackgroundColor": "#0B0C1B",
     "homeUrl": "https://balance-check.xyz",
     "accentColor": "#855DCD",
     "primaryCategory": "utility",
