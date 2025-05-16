@@ -36,9 +36,20 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { sdk } from '@farcaster/frame-sdk';
 
+
 export default function Home() {
   useEffect(() => {
     sdk.actions.ready();
+
+    const addFrame = async () => {
+      try {
+        await sdk.actions.addFrame();
+      } catch (err) {
+        console.error('Add frame failed:', err);
+      }
+    };
+
+    addFrame();
   }, []);
   interface BalanceEntry {
     wallet: string;
